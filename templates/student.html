@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+THÊM MỚI SINH VIÊN
+{% endblock %}
+{% block content %}
+        <form action="{{ url_for('addrec') }}" method="POST">
+            <h3>THÊM MỘT THÔNG TIN MỚI CỦA SINH VIÊN:</h3>
+            HỌ TÊN<br>
+            <input type="text" name="nm" /><br>
+
+            ĐỊA CHỈ<br>
+            <textarea name="add"></textarea><br>
+
+            THÀNH PHỐ<br>
+            <input type="text" name="city" /><br>
+
+            MÃ BƯU ĐIỆN<br>
+            <input type="text" name="zip" /><br>
+
+            <input type="submit" value="Submit" /><br>
+        </form>
+{% endblock %}
